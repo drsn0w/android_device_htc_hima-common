@@ -2,6 +2,10 @@
 # System Properties for HTC One M9 (hima)
 #
 
+# IO Scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=bfq
+
 # MTP and USB-OTG
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp \
@@ -35,6 +39,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.camcorder.stereo=true \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=true
